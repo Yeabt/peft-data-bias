@@ -81,8 +81,3 @@ labels in `preds/_index.npz`.
 - Trained adapters, heads, protocol files, identifier lists and results: CC BY 4.0. The adapters must be used with the
   original backbone weights, which keep their own licenses (DINOv2: Apache 2.0; OpenAI CLIP: MIT).
 - The source datasets keep their own terms of use, and nothing here grants rights to them.
-
-## Contact
-
-Jason Wie, Computer Science Department, School of Computer Science, Bina Nusantara University, Jakarta, Indonesia
-(jason.wie@binus.ac.id).
