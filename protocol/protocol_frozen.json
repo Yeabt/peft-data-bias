@@ -1,0 +1,58 @@
+{
+ "frozen_utc": "2026-10-15T01:07:21+00:00",
+ "fingerprint": "455a8c4a00baa998",
+ "lib_sha256": "c3f0e9019c5af6df9f553f1ced84dac0097ab90c946dd0761acd465c6930e3cd",
+ "protocol": {
+  "weights": {
+   "dinov2": "facebook/dinov2-large"
+  },
+  "versions": [
+   "d_bias",
+   "d_align"
+  ],
+  "input": "336x336 crop, no resizing; ImageNet mean/std; random horizontal flip (p=0.5)",
+  "head": "new nn.Linear on the final-layer class token (post-LayerNorm); sigmoid; BCE",
+  "lora": {
+   "r": 8,
+   "alpha": 16,
+   "dropout": 0.1,
+   "targets": "query, key, value and output projections of every block"
+  },
+  "optim": {
+   "name": "AdamW",
+   "weight_decay": 0.01,
+   "schedule": "cosine to 0",
+   "warmup_frac": 0.05,
+   "micro_batch": 8,
+   "accum": 4,
+   "steps": 3000,
+   "steps_lora": 1500
+  },
+  "lr_grid": {
+   "lp": [
+    0.0001,
+    0.0003,
+    0.001
+   ],
+   "lora": [
+    5e-05,
+    0.0001,
+    0.0002
+   ]
+  },
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "first_seed": 0,
+  "selection": "per strategy, the LR with the highest mean validation AUROC over D-bias and D-align (LP: also averaged over all seeds; LoRA: first seed only), AUROC rounded to 4 decimals; ties broken by the lower mean validation BCE",
+  "precision": "fp16 autocast with gradient scaling (LoRA); frozen-feature extraction in fp16",
+  "grad_checkpointing": false
+ },
+ "torch": "2.11.0+cu128",
+ "transformers": "5.16.1",
+ "peft": "0.20.0"
+}

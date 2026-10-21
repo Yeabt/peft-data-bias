@@ -1,0 +1,17 @@
+{
+ "zenodo": "https://zenodo.org/records/10066460/files/synthbuster.zip?download=1",
+ "raise_csv": "RAISE_1k.csv",
+ "crop": 336,
+ "qualities": [
+  50,
+  60,
+  70,
+  80,
+  90,
+  95
+ ],
+ "limit": null,
+ "kept": 8999,
+ "minutes": 32.8,
+ "pillow": "12.3.0"
+}

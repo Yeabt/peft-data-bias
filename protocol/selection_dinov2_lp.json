@@ -1,0 +1,30 @@
+{
+ "strategy": "lp",
+ "selected_lr": 0.001,
+ "rule": "per strategy, the LR with the highest mean validation AUROC over D-bias and D-align (LP: also averaged over all seeds; LoRA: first seed only), AUROC rounded to 4 decimals; ties broken by the lower mean validation BCE",
+ "tie_broken_by_bce": false,
+ "table": [
+  {
+   "lr": 0.001,
+   "mean_val_auroc": 0.9781393749999999,
+   "mean_val_bce": 0.19121598319702754,
+   "auroc_d_bias": 0.97996705,
+   "auroc_d_align": 0.9763116999999999
+  },
+  {
+   "lr": 0.0003,
+   "mean_val_auroc": 0.974825775,
+   "mean_val_bce": 0.22853395063697768,
+   "auroc_d_bias": 0.9766825000000001,
+   "auroc_d_align": 0.97296905
+  },
+  {
+   "lr": 0.0001,
+   "mean_val_auroc": 0.9581566,
+   "mean_val_bce": 0.32337584093325045,
+   "auroc_d_bias": 0.9604505,
+   "auroc_d_align": 0.9558627
+  }
+ ],
+ "fingerprint": "455a8c4a00baa998"
+}

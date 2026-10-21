@@ -1,0 +1,14 @@
+{
+  "d_bias": {
+    "train_acc": 1.0,
+    "val_acc": 1.0,
+    "criterion": ">= 0.95",
+    "pass": true
+  },
+  "d_align": {
+    "train_acc": 0.5,
+    "val_acc": 0.5,
+    "criterion": "<= 0.55",
+    "pass": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "d_bias": {
+    "val_acc_grid": 0.99825,
+    "val_acc_shifted": 0.99475,
+    "difference": 0.0035,
+    "val_acc_grid_minus_shifted": 0.99925
+  },
+  "d_align": {
+    "val_acc_grid": 0.92225,
+    "val_acc_shifted": 0.92975,
+    "difference": -0.0075,
+    "val_acc_grid_minus_shifted": 0.79625,
+    "criterion": "<= 0.05",
+    "pass": true,
+    "control_flag": true,
+    "ceiling_flag": false
+  }
+}
